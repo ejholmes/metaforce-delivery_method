@@ -25,6 +25,19 @@ config.action_mailer.metaforce_settings = {
 config.action_mailer.delivery_method = :metaforce
 ```
 
+Then use mailers just like you would with any other delivery method:
+
+```ruby
+# app/mailers/user_mailer.rb
+class UserMailer < ActionMailer::Base
+  default from: "from@example.com"
+
+  def welcome_email
+    mail(to: 'foo@example.com', subject: 'Foobar')
+  end
+end
+```
+
 ## Contributing
 
 1. Fork it
