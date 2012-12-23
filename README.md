@@ -33,7 +33,7 @@ class UserMailer < ActionMailer::Base
   default from: "from@example.com"
 
   def welcome_email
-    mail(to: 'foo@example.com', subject: 'Foobar')
+    mail(to: 'foo@example.com', subject: 'Welcome!')
   end
 end
 ```
