@@ -17,7 +17,7 @@ describe Metaforce::DeliveryMethod do
           :to_addresses => ['Bar bar@example.com'],
           :reply_to => 'No Reply no-reply@example.com',
           :subject => 'Hello',
-          :plain_text_body => kind_of(Mail::Body)
+          :plain_text_body => 'World!'
         )
         Mail.deliver do
           from     'foo foo@example.com'
@@ -35,8 +35,8 @@ describe Metaforce::DeliveryMethod do
           :to_addresses => ['Bar bar@example.com'],
           :reply_to => 'No Reply no-reply@example.com',
           :subject => 'Hello',
-          :plain_text_body => kind_of(Mail::Part),
-          :html_body => kind_of(Mail::Part)
+          :plain_text_body => kind_of(String),
+          :html_body => kind_of(String)
         )
         Mail.deliver do
           from     'foo foo@example.com'

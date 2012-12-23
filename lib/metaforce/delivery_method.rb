@@ -15,9 +15,9 @@ module Metaforce
         subject: mail.subject,
       }
       if mail.multipart?
-        options.merge!(plain_text_body: mail.text_part, html_body: mail.html_part)
+        options.merge!(plain_text_body: mail.text_part.to_s, html_body: mail.html_part.to_s)
       else
-        options.merge!(plain_text_body: mail.body)
+        options.merge!(plain_text_body: mail.body.to_s)
       end
       client.send_email options
     end
