@@ -1,9 +1,11 @@
 module SalesforceDeliveryMethod
   class DeliveryMethod
     attr_accessor :settings
+    attr_accessor :client
 
     def initialize(options = {})
       self.settings = options
+      self.client = settings[:client]
     end
 
     def deliver!(mail)
@@ -19,12 +21,5 @@ module SalesforceDeliveryMethod
       end
       client.send_email options
     end
-
-  private
-
-    def client
-      settings[:client]
-    end
-
   end
 end

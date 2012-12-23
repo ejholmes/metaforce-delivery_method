@@ -10,8 +10,13 @@ gem 'salesforce_delivery_method'
 ```
 
 ```ruby
+ActionMailer::Base.add_delivery_method :salesforce, SalesforceDeliveryMethod::DeliveryMethod
 config.action_mailer.salesforce_settings = {
-  :client => $metaforce_client
+  :client => Metaforce.new(
+    username: 'username',
+    password: 'passwrod',
+    security_token: 'securty token'
+  )
 }
 config.action_mailer.delivery_method = :salesforce
 ```
