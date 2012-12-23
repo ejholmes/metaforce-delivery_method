@@ -5,9 +5,13 @@ A delivery method for the [Mail](https://github.com/mikel/mail) gem using
 
 ## Rails Setup
 
+Add the gem to your Gemfile:
+
 ```ruby
 gem 'metaforce-delivery_method'
 ```
+
+Add the following to your config/application.rb:
 
 ```ruby
 ActionMailer::Base.add_delivery_method :salesforce, Metaforce::DeliveryMethod
