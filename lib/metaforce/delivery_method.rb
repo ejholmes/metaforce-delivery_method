@@ -11,6 +11,8 @@ module Metaforce
     def deliver!(mail)
       options = {
         to_addresses: Array(mail.to),
+        cc_addresses: Array(mail.cc),
+        bcc_addresses: Array(mail.bcc),
         reply_to: mail.reply_to,
         subject: mail.subject,
       }
