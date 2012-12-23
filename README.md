@@ -1,4 +1,4 @@
-# Salesforce Delivery Method
+# Metaforce Delivery Method
 
 A delivery method for the [Mail](https://github.com/mikel/mail) gem using
 [Metaforce](https://github.com/ejholmes/metaforce) as a backend.
@@ -6,19 +6,19 @@ A delivery method for the [Mail](https://github.com/mikel/mail) gem using
 ## Rails Setup
 
 ```ruby
-gem 'salesforce_delivery_method'
+gem 'metaforce-delivery_method'
 ```
 
 ```ruby
-ActionMailer::Base.add_delivery_method :salesforce, SalesforceDeliveryMethod::DeliveryMethod
-config.action_mailer.salesforce_settings = {
+ActionMailer::Base.add_delivery_method :salesforce, Metaforce::DeliveryMethod
+config.action_mailer.metaforce_settings = {
   :client => Metaforce.new(
     username: 'username',
     password: 'passwrod',
     security_token: 'securty token'
   )
 }
-config.action_mailer.delivery_method = :salesforce
+config.action_mailer.delivery_method = :metaforce
 ```
 
 ## Contributing

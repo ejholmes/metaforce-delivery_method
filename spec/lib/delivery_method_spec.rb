@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe SalesforceDeliveryMethod::DeliveryMethod do
+describe Metaforce::DeliveryMethod do
   let(:client) { double('metaforce client') }
 
   before do
     context = self
     Mail.defaults do
-      delivery_method SalesforceDeliveryMethod::DeliveryMethod, :client => context.client
+      delivery_method Metaforce::DeliveryMethod, :client => context.client
     end
   end
 

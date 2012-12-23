@@ -1,4 +1,4 @@
-module SalesforceDeliveryMethod
+module Metaforce
   class DeliveryMethod
     attr_accessor :settings
     attr_accessor :client
