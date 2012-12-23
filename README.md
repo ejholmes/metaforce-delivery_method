@@ -1,24 +1,19 @@
-# SalesforceDeliveryMethod
+# Salesforce Delivery Method
 
-TODO: Write a gem description
+A delivery method for the [Mail](https://github.com/mikel/mail) gem 
 
-## Installation
+## Rails Setup
 
-Add this line to your application's Gemfile:
+```ruby
+gem 'salesforce_delivery_method'
+```
 
-    gem 'salesforce_delivery_method'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install salesforce_delivery_method
-
-## Usage
-
-TODO: Write usage instructions here
+```ruby
+config.action_mailer.salesforce_settings = {
+  :client => $metaforce_client
+}
+config.action_mailer.delivery_method = :salesforce
+```
 
 ## Contributing
 
