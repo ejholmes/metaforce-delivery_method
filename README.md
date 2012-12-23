@@ -1,7 +1,7 @@
 # Metaforce Delivery Method
 
 A delivery method for the [Mail](https://github.com/mikel/mail) gem using
-[Metaforce](https://github.com/ejholmes/metaforce) as a backend.
+[Metaforce#send\_email](https://github.com/ejholmes/metaforce) as a backend.
 
 ## Rails Setup
 
