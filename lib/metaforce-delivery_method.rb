@@ -1,1 +1,1 @@
-require 'metaforce_delivery_method'
+require 'metaforce/delivery_method'
