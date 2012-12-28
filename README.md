@@ -1,5 +1,7 @@
 # Metaforce Delivery Method
 
+[![Build Status](https://travis-ci.org/ejholmes/metaforce-delivery_method.png?branch=master)](https://travis-ci.org/ejholmes/metaforce-delivery_method)
+
 A delivery method for the [Mail](https://github.com/mikel/mail) gem using
 [Metaforce#send\_email](https://github.com/ejholmes/metaforce) as a backend.
 
