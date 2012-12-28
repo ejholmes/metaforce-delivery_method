@@ -14,7 +14,6 @@ gem 'metaforce-delivery_method'
 Add the following to your config/application.rb:
 
 ```ruby
-ActionMailer::Base.add_delivery_method :metaforce, Metaforce::DeliveryMethod
 config.action_mailer.metaforce_settings = {
   :client => Metaforce.new(
     username: 'username',
