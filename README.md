@@ -13,17 +13,12 @@ Add the gem to your Gemfile:
 gem 'metaforce-delivery_method'
 ```
 
-Add the following to your config/application.rb:
+Export your credentials:
 
-```ruby
-config.action_mailer.metaforce_settings = {
-  :client => Metaforce.new(
-    username: 'username',
-    password: 'passwrod',
-    security_token: 'securty token'
-  )
-}
-config.action_mailer.delivery_method = :metaforce
+```bash
+export SALESFORCE_USERNAME="username"
+export SALESFORCE_PASSWORD="password"
+export SALESFORCE_SECURITY_TOKEN="security token"
 ```
 
 Then use mailers just like you would with any other delivery method:
